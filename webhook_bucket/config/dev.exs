@@ -2,10 +2,8 @@ import Config
 
 # Configure your database
 config :webhook_bucket, WebhookBucket.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "webhook_bucket_dev",
+  adapter: Ecto.Adapters.SQLite3,
+  database: "webhook_bucket_dev.db",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
