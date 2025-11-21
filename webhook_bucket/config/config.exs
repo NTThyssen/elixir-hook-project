@@ -11,6 +11,9 @@ config :webhook_bucket,
   ecto_repos: [WebhookBucket.Repo],
   generators: [timestamp_type: :utc_datetime]
 
+config :webhook_bucket, WebhookBucket.Repo,
+  adapter: Ecto.Adapters.Postgres
+
 # Configures the endpoint
 config :webhook_bucket, WebhookBucketWeb.Endpoint,
   url: [host: "localhost"],
