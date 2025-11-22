@@ -1,5 +1,5 @@
 defmodule WebhookBucket.Repo do
   use Ecto.Repo,
     otp_app: :webhook_bucket,
-    adapter: Ecto.Adapters.Postgres
+    adapter: Application.compile_env!(:webhook_bucket, [WebhookBucket.Repo, :adapter])
 end

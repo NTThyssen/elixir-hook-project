@@ -34,3 +34,8 @@ webhook_bucket-*.tar
 # In case you use Node.js/npm, you want to ignore these.
 npm-debug.log
 /assets/node_modules/
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
